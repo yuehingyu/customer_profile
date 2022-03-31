@@ -1,0 +1,16 @@
+{
+  "partyid": "3000013",
+  "first_name": "John",
+  "last_name": "Doe",
+  "gender": "M",
+  "title": "Mr.",
+  "addresses": [
+    {
+      "address_1": "100 America Blvd",
+      "address_2": "3rd FL",
+      "city": "pennington",
+      "state" : "new jersey",
+      "zip" : "08534"
+    }
+  ]
+}
