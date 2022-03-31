@@ -37,10 +37,9 @@ public class DbDaoUtility {
 	@Value("${azure.cosmo.database.sales.container}")
 	private String CONTAINER_ID;
 
-	// The Cosmos DB database
+	
 	private static CosmosDatabase cosmosDatabase = null;
 
-	// The Cosmos DB container
 	private static CosmosContainer cosmosContainer = null;
 
 	
@@ -141,7 +140,7 @@ public class DbDaoUtility {
 
 		List<JsonNode> list = getItemList(id);
 
-		System.out.println("size is " + list.size());
+		System.out.printf("size is %d", list.size());
 
 		if (list.size() > 0) {
 			return list.get(0);
@@ -151,9 +150,9 @@ public class DbDaoUtility {
 
 	}
 	
-	private List<JsonNode> getItemList(String id) {
+	public List<JsonNode> getItemList(String id) {
 
-		String sql = "SELECT * FROM root r WHERE r.id='" + id + "'";
+		String sql = "SELECT * FROM root r WHERE r.partyid='" + id + "'";
 
 		int maxItemCount = 1000;
 		int maxDegreeOfParallelism = 1000;

@@ -1,5 +1,7 @@
 package demo.azure.api.client_profile.app.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 
@@ -16,10 +18,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import demo.azure.api.client_profile.app.crud.ProfileDocDbDao;
 import demo.azure.api.client_profile.app.entity.Customer_Profile;
 
-/**
- *
- * Controller to return sale results
- */
+
 @RestController
 @ComponentScan("demo.azure.api.client_profile.app.crud")
 public class RequestsController {
@@ -41,6 +40,18 @@ public class RequestsController {
 		Customer_Profile item = todoHandler.getProfile(id);
 
 		return item;
+	}
+	
+	@RequestMapping(value = "/retail/customer/list/{id}", method = RequestMethod.GET)
+	@ResponseStatus(HttpStatus.OK)
+	public List<Customer_Profile> findProfile(@PathVariable String id) throws JsonProcessingException {
+
+		System.out.println("ID is "+id);
+		
+		
+		List<Customer_Profile> items = todoHandler.findProfile(id);
+
+		return items;
 	}
 
 	@RequestMapping(value = "/retail/customer/add", method = RequestMethod.POST)
