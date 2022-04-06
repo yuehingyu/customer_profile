@@ -1,0 +1,51 @@
+[
+{
+  "partyid": "3000013",
+  "first_name": "John",
+  "last_name": "Doe",
+  "gender": "M",
+  "title": "Mr.",
+  "addresses": [
+    {
+      "address_1": "100 America Blvd",
+      "address_2": "3rd FL",
+      "city": "Pennington",
+      "state" : "NJ",
+      "zip" : "08534"
+    }
+  ]
+},
+{
+  "partyid": "3000015",
+  "first_name": "Smith",
+  "last_name": "Doe",
+  "gender": "F",
+  "title": "Ms.",
+  "addresses": [
+    {
+      "address_1": "1500 Pole Run",
+      "address_2": "3rd FL",
+      "city": "Yardley",
+      "state" : "PA",
+      "zip" : "19067"
+    }
+  ]
+},
+{
+  "partyid": "3000016",
+  "first_name": "Jane",
+  "last_name": "Doe",
+  "gender": "F",
+  "title": "Ms.",
+  "addresses": [
+    {
+      "address_1": "1500 Main Street",
+      "address_2": "3rd FL",
+      "city": "Yardley",
+      "state" : "PA",
+      "zip" : "19067"
+    }
+  ]
+}
+
+]
